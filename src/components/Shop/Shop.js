@@ -5,6 +5,7 @@ import Product from "../Product/Product";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [choosenItem, setChoosenItem] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
@@ -33,11 +34,29 @@ const Shop = () => {
     }
   };
 
+  const randomItem = (items) => {
+    return items[Math.floor(Math.random() * items.length)];
+  };
+
+  const chooseItem = () => {
+    setChoosenItem(randomItem(products));
+  };
+
+  const resetCart = () => {
+    setCart([]);
+    setChoosenItem([]);
+  };
+
   return (
     <div>
-      <h1>Plant Shop</h1>
+      <h1>Greenly Plant Shop</h1>
 
-      <Cart cart={cart}></Cart>
+      <Cart
+        cart={cart}
+        resetCart={resetCart}
+        chooseItem={chooseItem}
+        choosenItem={choosenItem}
+      ></Cart>
 
       <div className="row my-3 g-3">
         {products.map((product) => (

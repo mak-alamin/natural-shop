@@ -1,7 +1,8 @@
 import React from "react";
 import CartItem from "../CartItem/CartItem";
+import ChooseItem from "../ChooseItem/ChooseItem";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
   return (
     <div>
       <button
@@ -32,6 +33,17 @@ const Cart = ({ cart }) => {
           {cart.map((item) => (
             <CartItem item={item} key={item["_id"]}></CartItem>
           ))}
+          <button className="btn btn-info" onClick={chooseItem}>
+            Choose 1 For me
+          </button>{" "}
+          <br />
+          <br />
+          <button className="btn btn-warning" onClick={resetCart}>
+            Reset
+          </button>
+          <div className="choosen-items">
+            {<ChooseItem item={choosenItem}></ChooseItem>}
+          </div>
         </div>
       </div>
     </div>
