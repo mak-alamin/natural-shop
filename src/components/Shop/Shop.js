@@ -39,7 +39,11 @@ const Shop = () => {
   };
 
   const chooseItem = () => {
-    setChoosenItem(randomItem(products));
+    if (cart.length > 2) {
+      setChoosenItem(randomItem(cart));
+    } else {
+      setChoosenItem(randomItem(products));
+    }
   };
 
   const resetCart = () => {

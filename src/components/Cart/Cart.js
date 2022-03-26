@@ -21,7 +21,9 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
         aria-labelledby="offcanvasRightLabel"
       >
         <div className="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Your Cart</h5>
+          <h5 id="offcanvasRightLabel" className="pb-2 border-bottom">
+            Your Cart
+          </h5>
           <button
             type="button"
             className="btn-close text-reset"
