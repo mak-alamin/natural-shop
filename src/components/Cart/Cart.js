@@ -1,6 +1,7 @@
 import React from "react";
+import CartItem from "../CartItem/CartItem";
 
-const Cart = () => {
+const Cart = ({ cart }) => {
   return (
     <div>
       <button
@@ -10,7 +11,7 @@ const Cart = () => {
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        Cart
+        Cart <span className="badge badge-primary">{cart.length}</span>
       </button>
 
       <div
@@ -27,7 +28,11 @@ const Cart = () => {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">...</div>
+        <div className="offcanvas-body">
+          {cart.map((item) => (
+            <CartItem item={item} key={item["_id"]}></CartItem>
+          ))}
+        </div>
       </div>
     </div>
   );

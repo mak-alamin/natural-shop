@@ -1,8 +1,8 @@
 import React from "react";
 
-const Product = (product) => {
-  console.log(product);
-  const { name, price, picture } = product.product;
+const Product = ({ product, handleAddToCart }) => {
+  const { name, price, picture } = product;
+
   return (
     <div className="col-md-4">
       <div className="card">
@@ -15,8 +15,9 @@ const Product = (product) => {
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
+            onClick={() => handleAddToCart(product)}
           >
-            Add to Cart
+            Add to Cart <i className="fa fa-cart-plus"></i>
           </button>
         </div>
       </div>

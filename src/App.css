@@ -9,3 +9,6 @@
   right: 14px;
   top: 8px;
 }
+span.badge.badge-primary {
+  background: #0948a5;
+}
