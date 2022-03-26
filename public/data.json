@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "623f197807d50e68aa5403f9",
+    "name": "Adipiscing Elit",
+    "price": "$34.50",
+    "picture": "./images/AdipiscingElit.webp"
+  },
+  {
+    "_id": "623f1978149ebdcdf169dce0",
+    "name": "Aloe vera",
+    "price": "$43.60",
+    "picture": "./images/Aloevera.webp"
+  },
+  {
+    "_id": "623f19786e0e6c9590d1fdb4",
+    "name": "Chamaedorea elegans",
+    "price": "$26.60",
+    "picture": "./images/Chamaedorea-elegans'NeantheBellaPalm'.webp"
+  },
+  {
+    "_id": "623f1978a528fba7d3d32ae2",
+    "name": "Commodo Augue Nisi",
+    "price": "$30.20",
+    "picture": "./images/CommodoAugueNisi.webp"
+  },
+  {
+    "_id": "623f1978134096ed9fae3623",
+    "name": "Dracaena deremensis",
+    "price": "$46.30",
+    "picture": "./images/Dracaena-deremensis'JanetCraigCompacta'.webp"
+  },
+  {
+    "_id": "623f1c4d1807d0b60ed091c4",
+    "name": "Gravida Semper",
+    "price": "$25.40",
+    "picture": "./images/GravidaSemper.webp"
+  },
+  {
+    "_id": "623f1c4daed2e1edaeeac1db",
+    "name": "Massa Massa",
+    "price": "$43.70",
+    "picture": "./images/MassaMassa.webp"
+  },
+  {
+    "_id": "623f1c4dfa0628ca2061202a",
+    "name": "Morbi Ornare",
+    "price": "$24.40",
+    "picture": "./images/MorbiOrnare.webp"
+  },
+  {
+    "_id": "623f1c4d849934916d89cd4c",
+    "name": "Schefflera arboricola",
+    "price": "$21.00",
+    "picture": "./images/Schefflera-arboricola'DwarfUmbrellaTree'.webp"
+  }
+]
