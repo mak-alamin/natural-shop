@@ -1,6 +1,6 @@
 # Greenly Plant Shop
 
-Live Website: [View Live Site](https://greenly-plant-shop.netlify.app).
+Live Website: [View Live Site](https://greenly-plant-shop.netlify.app/).
 
 Github Repo: [https://github.com/Programming-Hero-Web-Course4/lucky-one-mak-alamin](https://github.com/Programming-Hero-Web-Course4/lucky-one-mak-alamin).
 

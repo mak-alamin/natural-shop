@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
+import QA from "../QA/QA";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -53,7 +54,9 @@ const Shop = () => {
 
   return (
     <div>
-      <h1 className="siteName"><span className="text-success">Greenly</span> Plant Shop</h1>
+      <h1 className="siteName">
+        <span className="text-success">Greenly</span> Plant Shop
+      </h1>
 
       <Cart
         cart={cart}
@@ -70,6 +73,10 @@ const Shop = () => {
             handleAddToCart={handleAddToCart}
           ></Product>
         ))}
+      </div>
+
+      <div className="row my-5">
+        <QA></QA>
       </div>
     </div>
   );
