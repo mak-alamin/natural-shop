@@ -10,16 +10,15 @@ const Shop = () => {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        console.log(data);
       });
   }, []);
   return (
     <div>
-      <h1>Plant Shop: {products.length}</h1>
+      <h1>Plant Shop</h1>
 
       <Cart></Cart>
 
-      <div className="row my-3">
+      <div className="row my-3 g-3">
         {products.map((product) => (
           <Product product={product} key={product["_id"]}></Product>
         ))}

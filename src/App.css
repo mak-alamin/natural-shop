@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 .container {
   position: relative;
 }
 .cart-btn {
   position: absolute;
-  right: 0px;
+  right: 14px;
   top: 8px;
 }
