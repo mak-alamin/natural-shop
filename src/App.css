@@ -12,3 +12,13 @@
 span.badge.badge-primary {
   background: #0948a5;
 }
+
+@media (max-width: 767px) {
+  h1.siteName {
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  .cart-btn {
+    top: 0;
+  }
+}

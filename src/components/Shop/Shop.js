@@ -53,7 +53,7 @@ const Shop = () => {
 
   return (
     <div>
-      <h1>Greenly Plant Shop</h1>
+      <h1 className="siteName"><span className="text-success">Greenly</span> Plant Shop</h1>
 
       <Cart
         cart={cart}
