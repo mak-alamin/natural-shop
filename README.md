@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Greenly Plant Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Website: [View Live Site](https://greenly-plant-shop.netlify.app).
+
+Github Repo: [https://github.com/Programming-Hero-Web-Course4/lucky-one-mak-alamin](https://github.com/Programming-Hero-Web-Course4/lucky-one-mak-alamin).
 
 ## Available Scripts
 
