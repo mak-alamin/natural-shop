@@ -55,7 +55,7 @@ const Shop = () => {
   return (
     <div>
       <h1 className="siteName">
-        <span className="text-success">Greenly</span> Plant Shop
+        <span className="text-success">Natural</span> Shop
       </h1>
 
       <Cart
