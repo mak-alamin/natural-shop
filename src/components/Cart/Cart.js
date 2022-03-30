@@ -1,19 +1,31 @@
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
+import { animated, useSpring } from "react-spring";
 import CartItem from "../CartItem/CartItem";
 import ChooseItem from "../ChooseItem/ChooseItem";
 
 const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
+  const [flip, set] = useState(false);
+  const props = useSpring({
+    to: { right: -14 },
+    from: { right: 14 },
+    reverse: flip,
+    delay: 1000,
+    onRest: () => set(!flip),
+  });
   return (
-    <div>
-      <button
+    <>
+      <animated.button
+        style={props}
         className="btn btn-primary cart-btn"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        Cart <span className="badge badge-primary">{cart.length}</span>
-      </button>
+        <FontAwesomeIcon icon="fa-thin fa-cart-circle-check" /> Cart{" "}
+        <span className="badge badge-primary">{cart.length}</span>
+      </animated.button>
 
       <div
         className="offcanvas offcanvas-end"
@@ -48,7 +60,7 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
