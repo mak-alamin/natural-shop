@@ -1,6 +1,6 @@
 import React from "react";
 
-const Product = ({ product, handleAddToCart }) => {
+const Product = ({ product, handleAddToCart, cartTarget }) => {
   const { name, price, picture } = product;
 
   return (
@@ -13,7 +13,7 @@ const Product = ({ product, handleAddToCart }) => {
           <button
             className="btn btn-primary"
             data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
+            data-bs-target={cartTarget}
             aria-controls="offcanvasRight"
             onClick={() => handleAddToCart(product)}
           >
