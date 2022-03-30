@@ -1,8 +1,14 @@
+:root {
+  --main-color: #14ac6b;
+}
 * {
   box-sizing: border-box;
 }
 .container {
   position: relative;
+}
+.primary-text {
+  color: var(--main-color);
 }
 .cart-btn {
   position: absolute;
