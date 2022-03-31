@@ -11,25 +11,24 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
 
   const [flip, set] = useState(false);
   const props = useSpring({
-    to: { right: 40 },
-    from: { right: 14 },
+    to: { right: 80 },
+    from: { right: 50 },
     reverse: flip,
-    delay: 1000,
+    delay: 5000,
     onRest: () => set(!flip),
   });
   return (
     <>
-      <animated.button
+      <animated.div
         style={props}
-        className="btn btn-primary cart-btn"
-        type="button"
+        className="cart-btn"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        <FontAwesomeIcon icon={faCartArrowDown} /> Cart{" "}
+        <FontAwesomeIcon icon={faCartArrowDown} />
         <span className="badge badge-primary">{cart.length}</span>
-      </animated.button>
+      </animated.div>
 
       <div
         className="offcanvas offcanvas-end"

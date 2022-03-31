@@ -9,7 +9,12 @@ div#navbarSupportedContent {
 }
 .cart-btn {
   position: absolute;
-  right: 14px;
-  top: 20px;
+  right: 50px;
+  top: 28px;
   transition: 1s all ease-in-out;
+  cursor: pointer;
+}
+.cart-btn svg {
+  font-size: 35px;
+  color: #2f4858;
 }

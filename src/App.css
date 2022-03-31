@@ -15,7 +15,14 @@ div#root {
   color: var(--main-color);
 }
 span.badge.badge-primary {
-  background: #0948a5;
+  background: #155c6f;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 30px;
+  top: -14px;
 }
 
 @media (max-width: 767px) {
