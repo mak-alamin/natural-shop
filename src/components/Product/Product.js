@@ -1,3 +1,5 @@
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Product = ({ product, handleAddToCart, cartTarget }) => {
@@ -17,7 +19,7 @@ const Product = ({ product, handleAddToCart, cartTarget }) => {
             aria-controls="offcanvasRight"
             onClick={() => handleAddToCart(product)}
           >
-            Add to Cart <i className="fa fa-cart-plus"></i>
+            Add to Cart <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
           </button>
         </div>
       </div>

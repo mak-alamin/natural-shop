@@ -1,8 +1,10 @@
+import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { animated, useSpring } from "react-spring";
 import CartItem from "../CartItem/CartItem";
 import ChooseItem from "../ChooseItem/ChooseItem";
+import EmptyCart from "./EmptyCart/EmptyCart";
 
 const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
   const [flip, set] = useState(false);
@@ -23,7 +25,7 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        <FontAwesomeIcon icon="fa-thin fa-cart-circle-check" /> Cart{" "}
+        <FontAwesomeIcon icon={faCartArrowDown} /> Cart{" "}
         <span className="badge badge-primary">{cart.length}</span>
       </animated.button>
 
@@ -44,9 +46,13 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
           ></button>
         </div>
         <div className="offcanvas-body">
-          {cart.map((item) => (
-            <CartItem item={item} key={item["_id"]}></CartItem>
-          ))}
+          {cart.length ? (
+            cart.map((item) => (
+              <CartItem item={item} key={item["_id"]}></CartItem>
+            ))
+          ) : (
+            <EmptyCart></EmptyCart>
+          )}
           <button className="btn btn-info" onClick={chooseItem}>
             Choose 1 For me
           </button>{" "}
