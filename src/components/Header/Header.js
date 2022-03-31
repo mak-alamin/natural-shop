@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import "./Header.css";
 
 const Header = ({ cart, resetCart, chooseItem, choosenItem }) => {
   return (
     <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
         <h1 className="siteName">
           <NavLink to="/" className={"navbar-brand"}>
             <span className="primary-text">Natural</span> Shop
@@ -33,6 +34,11 @@ const Header = ({ cart, resetCart, chooseItem, choosenItem }) => {
             <li className="nav-item">
               <NavLink to="/shop" className="nav-link">
                 Shop
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/about" className="nav-link">
+                About Us
               </NavLink>
             </li>
           </ul>

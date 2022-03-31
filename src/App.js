@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Header
         cart={cart}
         resetCart={resetCart}
@@ -75,7 +75,7 @@ function App() {
           }
         ></Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

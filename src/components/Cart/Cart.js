@@ -11,7 +11,7 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
 
   const [flip, set] = useState(false);
   const props = useSpring({
-    to: { right: 50 },
+    to: { right: 40 },
     from: { right: 14 },
     reverse: flip,
     delay: 1000,
