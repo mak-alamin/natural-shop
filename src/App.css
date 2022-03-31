@@ -14,12 +14,6 @@ div#root {
 .primary-text {
   color: var(--main-color);
 }
-.cart-btn {
-  position: absolute;
-  right: 14px;
-  top: 15px;
-  transition: 1s all ease-in-out;
-}
 span.badge.badge-primary {
   background: #0948a5;
 }
