@@ -7,6 +7,8 @@ import ChooseItem from "../ChooseItem/ChooseItem";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
 const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
+  console.log(choosenItem);
+
   const [flip, set] = useState(false);
   const props = useSpring({
     to: { right: -14 },
@@ -53,14 +55,19 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
           ) : (
             <EmptyCart></EmptyCart>
           )}
+          <br />
           <button className="btn btn-info" onClick={chooseItem}>
             Choose 1 For me
           </button>{" "}
           <br />
           <br />
-          <button className="btn btn-warning" onClick={resetCart}>
-            Reset
-          </button>
+          {cart.length || choosenItem["_id"] ? (
+            <button className="btn btn-warning" onClick={resetCart}>
+              Reset
+            </button>
+          ) : (
+            ""
+          )}
           <div className="choosen-items">
             {<ChooseItem item={choosenItem}></ChooseItem>}
           </div>
