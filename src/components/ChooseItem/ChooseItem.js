@@ -7,10 +7,10 @@ const ChooseItem = ({ item }) => {
     return (
       <div className="mt-5">
         <h3>Choosen for you</h3>
-        <p>
+        <div className="cartItem">
           <img src={picture} alt="" width="60" />
           <strong className="ms-3">{name}</strong>
-        </p>
+        </div>
       </div>
     );
   }
