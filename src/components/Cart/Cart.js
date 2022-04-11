@@ -63,7 +63,7 @@ function Cart({ cart, resetCart, chooseItem, choosenItem }) {
           <br />
           {cart.length || choosenItem["_id"] ? (
             <button className="btn btn-warning" onClick={resetCart}>
-              Reset
+              Empty Cart
             </button>
           ) : (
             ""
