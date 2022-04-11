@@ -1,26 +1,26 @@
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { NavLink } from "react-router-dom";
+import AddToCart from "../AddToCart/AddToCart";
 
 const Product = ({ product, handleAddToCart, cartTarget }) => {
-  const { name, price, picture } = product;
+  const { _id, name, price, picture } = product;
 
   return (
     <div className="col-md-4">
       <div className="card">
         <img src={picture} className="card-img-top" alt={name} />
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
+          <h5 className="card-title">
+            {" "}
+            <NavLink to={`product/${_id}`}>{name}</NavLink>
+          </h5>
           <p className="card-text">Price: {price}</p>
-          <button
-            className="btn btn-primary"
-            data-bs-toggle="offcanvas"
-            data-bs-target={cartTarget}
-            aria-controls="offcanvasRight"
-            onClick={() => handleAddToCart(product)}
-          >
-            Add to Cart <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
-          </button>
+
+          <AddToCart
+            handleAddToCart={handleAddToCart}
+            cartTarget={cartTarget}
+            product={product}
+          ></AddToCart>
         </div>
       </div>
     </div>

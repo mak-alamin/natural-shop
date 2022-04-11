@@ -4,6 +4,7 @@ import "./App.css";
 import About from "./components/About/About";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Shop from "./components/Shop/Shop";
 
 function App() {
@@ -72,6 +73,16 @@ function App() {
               handleAddToCart={handleAddToCart}
               cartTarget={cartTarget}
             ></Shop>
+          }
+        ></Route>
+
+        <Route
+          path="shop/product/:product_id"
+          element={
+            <ProductDetails
+              handleAddToCart={handleAddToCart}
+              cartTarget={cartTarget}
+            ></ProductDetails>
           }
         ></Route>
       </Routes>

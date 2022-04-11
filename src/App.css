@@ -24,6 +24,9 @@ span.badge.badge-primary {
   left: 30px;
   top: -14px;
 }
+.offcanvas {
+  z-index: 9999;
+}
 
 @media (max-width: 767px) {
   h1.siteName {

@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { animated, useSpring } from "react-spring";
 import CartItem from "../CartItem/CartItem";
 import ChooseItem from "../ChooseItem/ChooseItem";
+import "./Cart.module.css";
 import EmptyCart from "./EmptyCart/EmptyCart";
 
-const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
+function Cart({ cart, resetCart, chooseItem, choosenItem }) {
   console.log(choosenItem);
 
   const [flip, set] = useState(false);
@@ -18,7 +19,7 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
     onRest: () => set(!flip),
   });
   return (
-    <>
+    <div>
       <animated.div
         style={props}
         className="cart-btn"
@@ -72,8 +73,8 @@ const Cart = ({ cart, resetCart, chooseItem, choosenItem }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default Cart;
