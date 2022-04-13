@@ -4,6 +4,7 @@ import "./App.css";
 import About from "./components/About/About";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import Shop from "./components/Shop/Shop";
 
@@ -85,6 +86,8 @@ function App() {
             ></ProductDetails>
           }
         ></Route>
+
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </>
   );
