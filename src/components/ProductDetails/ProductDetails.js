@@ -8,7 +8,7 @@ const ProductDetails = ({ handleAddToCart, cartTarget }) => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:3000//data.json`)
+    fetch(`http://localhost:5000/products`)
       .then((res) => res.json())
       .then((data) => {
         let foundProduct = data.find((pd) => pd["_id"] === product_id);
