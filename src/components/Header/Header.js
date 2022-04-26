@@ -5,8 +5,8 @@ import "./Header.css";
 
 const Header = ({ cart, resetCart, chooseItem, choosenItem }) => {
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
+    <div className="container-fluid bg-light">
+      <nav className="col-md-10 navbar navbar-expand-lg navbar-light px-3">
         <h1 className="siteName">
           <NavLink to="/" className={"navbar-brand"}>
             <span className="primary-text">Natural</span> Shop
@@ -41,6 +41,14 @@ const Header = ({ cart, resetCart, chooseItem, choosenItem }) => {
                 About Us
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/natural-shop-admin"
+                className="nav-link bg-dark text-white"
+              >
+                Admin
+              </NavLink>
+            </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <input
@@ -52,7 +60,6 @@ const Header = ({ cart, resetCart, chooseItem, choosenItem }) => {
           </form>
         </div>
       </nav>
-
       <Cart
         cart={cart}
         resetCart={resetCart}
