@@ -7,10 +7,10 @@ const Header = () => {
         <div className="navbar-brand-wrapper d-flex justify-content-center">
           <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
             <a className="navbar-brand brand-logo" href="index.html">
-              <img src="images/logo.svg" alt="logo" />
+              <img src="images/logo.png" alt="logo" />
             </a>
             <a className="navbar-brand brand-logo-mini" href="index.html">
-              <img src="images/logo-mini.svg" alt="logo" />
+              <img src="images/logo.png" alt="logo" />
             </a>
             <button
               className="navbar-toggler navbar-toggler align-self-center"

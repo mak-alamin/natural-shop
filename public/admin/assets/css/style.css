@@ -21404,8 +21404,8 @@ dl li {
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper .navbar-brand img {
-  width: calc(257px - 150px);
-  max-width: 100%;
+  width: 100%;
+  max-width: 45px;
   height: 34px;
   margin: auto;
   vertical-align: middle;
