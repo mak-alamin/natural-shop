@@ -52,48 +52,48 @@ function App() {
   return (
     <>
       {pathname.includes("/natural-shop-admin") ? (
-        ""
+        <Admin></Admin>
       ) : (
-        <Header
-          cart={cart}
-          resetCart={resetCart}
-          chooseItem={chooseItem}
-          choosenItem={choosenItem}
-        ></Header>
+        <>
+          <Header
+            cart={cart}
+            resetCart={resetCart}
+            chooseItem={chooseItem}
+            choosenItem={choosenItem}
+          ></Header>
+
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+
+            <Route path="/home" element={<Home></Home>}></Route>
+
+            <Route path="/about" element={<About></About>}></Route>
+
+            <Route
+              path="/shop"
+              element={
+                <Shop
+                  products={products}
+                  handleAddToCart={handleAddToCart}
+                  cartTarget={cartTarget}
+                ></Shop>
+              }
+            ></Route>
+
+            <Route
+              path="shop/product/:product_id"
+              element={
+                <ProductDetails
+                  handleAddToCart={handleAddToCart}
+                  cartTarget={cartTarget}
+                ></ProductDetails>
+              }
+            ></Route>
+
+            <Route path="*" element={<NotFound></NotFound>}></Route>
+          </Routes>
+        </>
       )}
-
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-
-        <Route path="/home" element={<Home></Home>}></Route>
-
-        <Route path="/about" element={<About></About>}></Route>
-
-        <Route
-          path="/shop"
-          element={
-            <Shop
-              products={products}
-              handleAddToCart={handleAddToCart}
-              cartTarget={cartTarget}
-            ></Shop>
-          }
-        ></Route>
-
-        <Route
-          path="shop/product/:product_id"
-          element={
-            <ProductDetails
-              handleAddToCart={handleAddToCart}
-              cartTarget={cartTarget}
-            ></ProductDetails>
-          }
-        ></Route>
-
-        <Route path="/natural-shop-admin" element={<Admin></Admin>}></Route>
-
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
     </>
   );
 }

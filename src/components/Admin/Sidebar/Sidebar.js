@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -6,10 +7,10 @@ const Sidebar = () => {
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <ul className="nav">
           <li className="nav-item">
-            <a className="nav-link" href="index.html">
+            <NavLink to="/natural-shop-admin" className="nav-link">
               <i className="mdi mdi-home menu-icon"></i>
               <span className="menu-title">Dashboard</span>
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
             <a
@@ -71,16 +72,25 @@ const Sidebar = () => {
             <a
               className="nav-link"
               data-toggle="collapse"
-              href="#auth"
-              aria-expanded="false"
-              aria-controls="auth"
+              href="#user_sub_menu"
             >
               <i className="mdi mdi-account menu-icon"></i>
-              <span className="menu-title">User Pages</span>
+              <span className="menu-title">Users</span>
               <i className="menu-arrow"></i>
             </a>
-            <div className="collapse" id="auth">
+            <div className="collapse" id="user_sub_menu">
               <ul className="nav flex-column sub-menu">
+                <li className="nav-item">
+                  <NavLink to="/natural-shop-admin/users" className="nav-link">
+                    All User
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink to="/natural-shop-admin/add-new-user" className="nav-link">
+                    Add New
+                  </NavLink>
+                </li>
+
                 <li className="nav-item">
                   {" "}
                   <a className="nav-link" href="pages/samples/login.html">

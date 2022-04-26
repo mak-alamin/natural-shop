@@ -1,7 +1,10 @@
 import React from "react";
+
 import Header from "./Header/Header";
 import MainPanel from "./MainPanel/MainPanel";
 import Sidebar from "./Sidebar/Sidebar";
+
+import Footer from "./Footer/Footer";
 
 const Admin = () => {
   return (
@@ -9,7 +12,14 @@ const Admin = () => {
       <Header></Header>
       <div className="container-fluid page-body-wrapper">
         <Sidebar></Sidebar>
-        <MainPanel></MainPanel>
+
+        <div className="main-panel">
+          <div className="content-wrapper">
+            <MainPanel></MainPanel>
+          </div>
+          <Footer></Footer>
+        </div>
+        
       </div>
     </div>
   );
