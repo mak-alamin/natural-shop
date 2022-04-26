@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import About from "./components/About/About";
+import Admin from "./components/Admin/Admin";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
@@ -23,10 +24,6 @@ function App() {
   }, []);
 
   const handleAddToCart = (selectedProduct) => {
-    // const exists = cart.find(
-    //   (product) => product["_id"] === selectedProduct["_id"]
-    // );
-
     let newCart = [...cart];
     newCart = [...cart, selectedProduct];
     setCart(newCart);
@@ -50,14 +47,20 @@ function App() {
     setChoosenItem([]);
   };
 
+  const { pathname } = useLocation();
+
   return (
     <>
-      <Header
-        cart={cart}
-        resetCart={resetCart}
-        chooseItem={chooseItem}
-        choosenItem={choosenItem}
-      ></Header>
+      {pathname.includes("/natural-shop-admin") ? (
+        ""
+      ) : (
+        <Header
+          cart={cart}
+          resetCart={resetCart}
+          chooseItem={chooseItem}
+          choosenItem={choosenItem}
+        ></Header>
+      )}
 
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
@@ -86,6 +89,8 @@ function App() {
             ></ProductDetails>
           }
         ></Route>
+
+        <Route path="/natural-shop-admin" element={<Admin></Admin>}></Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
