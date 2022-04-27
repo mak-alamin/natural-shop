@@ -57,11 +57,12 @@ const Sidebar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="pages/tables/basic-table.html">
+            <NavLink to="/natural-shop-admin/products" className="nav-link">
               <i className="mdi mdi-grid-large menu-icon"></i>
-              <span className="menu-title">Tables</span>
-            </a>
+              <span className="menu-title">Products</span>
+            </NavLink>
           </li>
+
           <li className="nav-item">
             <a className="nav-link" href="pages/icons/mdi.html">
               <i className="mdi mdi-emoticon menu-icon"></i>
@@ -86,7 +87,10 @@ const Sidebar = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/natural-shop-admin/add-new-user" className="nav-link">
+                  <NavLink
+                    to="/natural-shop-admin/add-new-user"
+                    className="nav-link"
+                  >
                     Add New
                   </NavLink>
                 </li>

@@ -4,6 +4,7 @@ import NotFound from "../../NotFound/NotFound";
 import AddNewUser from "../AddNewUser/AddNewUser";
 import AllUsers from "../AllUsers/AllUsers";
 import Dashboard from "../Dashboard/Dashboard";
+import Products from "../Products/Products";
 
 const MainPanel = () => {
   return (
@@ -13,6 +14,11 @@ const MainPanel = () => {
           path="/natural-shop-admin"
           element={<Dashboard></Dashboard>}
         ></Route>
+        <Route
+          path="/natural-shop-admin/products"
+          element={<Products></Products>}
+        ></Route>
+
         <Route
           path="/natural-shop-admin/users"
           element={<AllUsers></AllUsers>}
